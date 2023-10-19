@@ -1,20 +1,11 @@
-# Leap year 
+n = int(input("Enter input number : "))
 
-"""
-year % 4 == 0 &
-year % 100 != 0 /
-year % 400 == 0
-
-"""
-def isLeapYear(year):
-  if (year % 4 ==0 and year % 100 !=0) or year % 400 == 0:
-    return True
-  else:
-    return False
-
-year = int(input("Enter a year : "))
-
-if isLeapYear(year):
-  print('{} is a leap year.'.format(year))
+fact = 1
+if n < 0:
+  print("Factorial does not exist for negative numbers")
+elif n == 0:
+  print("The factorial of 0 is 1")
 else:
-  print('{} is not a leap year.'.format(year))
+  for i in range(1, n + 1):
+    fact = fact * i
+  print("The factorial of", n, "is", fact)

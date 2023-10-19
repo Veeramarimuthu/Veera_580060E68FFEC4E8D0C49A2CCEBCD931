@@ -1,24 +1,5 @@
-# 1.1 Implement a recursive function to calculate the factorial of a given number.
-
-"""
-1! = 1 x 1
-2! = 2 x 1! --->2 x 1
-3! = 3 x 2! --->3 x 2 x 1
-.
-.
-10! = 10 x 9! ---> 10 x 9 x 8 x... x 1
-
-formula - n x (n-1)!
-"""
-
-
-def fact_rec(n):
-  if n==0 or n==1:
-    return 1
-  else:
-    return n*fact_rec(n-1)
-
-number = int(input("Enter a value : "))
-res = fact_rec(number)
-
-print("The factorial of {} is {}.".format(number,res))
+year = int(input("Enter year to be checked:"))
+if (year % 4 == 0 and year % 100 != 0 or year % 400 == 0):
+  print("The year is a leap year!")
+else:
+  print("The year isn't a leap year!")
